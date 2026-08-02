@@ -226,49 +226,23 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-[#000000]/50" />
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl flex-col gap-8 px-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:py-20">
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-18 px-6 py-24 lg:flex-row lg:items-center lg:justify-between lg:py-20">
         {/* Left Text */}
         <div className="max-w-xl">
-          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#d4a017]">
-            San Diego&apos;s Outdoor Specialists
-          </p>
           <h1 className="font-[family-name:var(--font-poppins)] text-[3rem] leading-[1.05] text-[#ffffff] md:text-[4rem] lg:text-[4.5rem] text-balance">
             <span className="font-light">Transform your</span>
             <br />
             <span className="font-extrabold">outdoor space.</span>
           </h1>
-          <p className="mt-4 text-[15px] font-light leading-relaxed text-[#ffffff]/80 max-w-sm">
-            $15.5K gets you new turf, new pavers &mdash; fully installed. Premium results, zero stress.
-          </p>
 
-          {/* Value Bullets */}
-          <ul className="mt-5 flex flex-col gap-2.5">
-            <li className="flex items-center gap-2.5">
-              <CheckCircle className="h-4 w-4 shrink-0 text-[#d4a017]" />
-              <span className="text-[14px] text-[#ffffff]/90">
-                Premium Pavers &amp; Top-Tier Turf
-              </span>
-            </li>
-            <li className="flex items-center gap-2.5">
-              <CheckCircle className="h-4 w-4 shrink-0 text-[#d4a017]" />
-              <span className="text-[14px] text-[#ffffff]/90">
-                Free 3D Design Included
-              </span>
-            </li>
-            <li className="flex items-center gap-2.5">
-              <CheckCircle className="h-4 w-4 shrink-0 text-[#d4a017]" />
-              <span className="text-[14px] text-[#ffffff]/90">
-                12 Months 0% Financing Available
-              </span>
-            </li>
-          </ul>
-
-          <a
-            href="#quote"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#ffffff] px-6 py-3 text-[13px] font-bold uppercase tracking-wider text-[#1a2e0d] transition-all hover:bg-[#f0f0ec] hover:shadow-lg"
-          >
-            Check If My Space Qualifies
-          </a>
+          <div className="mt-6 text-center flex items-center justify-center">
+            <a
+              href="#quote"
+              className="inline-flex items-center gap-2 rounded-full bg-[#ffffff] px-6 py-3 text-[13px] font-bold uppercase tracking-wider text-[#1a2e0d] transition-all hover:bg-[#f0f0ec] hover:shadow-lg"
+            >
+              Choose from our packages
+            </a>
+          </div>
         </div>
 
         {/* Right: Multi-step Form */}
@@ -281,9 +255,6 @@ export function HeroSection() {
                 <span className="text-[#ffffff]">Yours Might.</span>
               </p>
               <div className="my-3 h-px bg-[#ffffff]/20" />
-              <h2 className="text-lg md:text-xl font-bold text-[#ffffff] text-center leading-snug">
-                See If You Qualify for Our $15.5K Outdoor Transformation
-              </h2>
             </div>
 
             <div className="px-5 pt-4 pb-5">
