@@ -235,6 +235,10 @@ export function HeroSection() {
             <span className="font-extrabold">outdoor space.</span>
           </h1>
 
+          <p className="mt-3 font-serif text-[2rem] italic leading-none text-[#5a8a2a] md:text-[2.4rem] lg:text-[2.8rem]">
+            elegantly.
+          </p>
+
           <div className="mt-6 text-center flex items-center justify-center">
             <a
               href="#quote"
