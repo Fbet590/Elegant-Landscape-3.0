@@ -196,10 +196,10 @@ export function HeroSection() {
             className="object-cover object-[center_30%]"
             priority
           />
-<div className="absolute inset-0 bg-[#000000]/60" />
+        <div className="absolute inset-0 bg-[#000000]/50" />
         </div>
         <div className="relative mx-auto flex max-w-7xl items-center justify-center px-6 py-24">
-          <div className="w-full max-w-md rounded-xl bg-background p-8 text-center shadow-2xl">
+          <div className="w-full max-w-md rounded-2xl bg-background p-8 text-center shadow-2xl">
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#2d5016]">
               <Check className="h-8 w-8 text-[#ffffff]" />
             </div>
@@ -223,44 +223,49 @@ export function HeroSection() {
           className="object-cover object-[center_30%]"
           priority
         />
-        <div className="absolute inset-0 bg-[#000000]/60" />
+        <div className="absolute inset-0 bg-[#000000]/50" />
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-6 py-14 lg:flex-row lg:items-center lg:justify-between lg:py-20">
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-8 px-6 py-12 lg:flex-row lg:items-center lg:justify-between lg:py-20">
         {/* Left Text */}
         <div className="max-w-xl">
-          <h1 className="font-[family-name:var(--font-poppins)] font-bold text-[3.5rem] leading-tight text-[#ffffff] md:text-[4.1rem] lg:text-[5rem] lg:leading-snug text-balance">
-            $15.5K. New Turf. New Pavers. <br />
-            Done.
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#d4a017]">
+            San Diego&apos;s Outdoor Specialists
+          </p>
+          <h1 className="font-[family-name:var(--font-poppins)] text-[3rem] leading-[1.05] text-[#ffffff] md:text-[4rem] lg:text-[4.5rem] text-balance">
+            <span className="font-light">Transform your</span>
+            <br />
+            <span className="font-extrabold">outdoor space.</span>
           </h1>
+          <p className="mt-4 text-[15px] font-light leading-relaxed text-[#ffffff]/80 max-w-sm">
+            $15.5K gets you new turf, new pavers &mdash; fully installed. Premium results, zero stress.
+          </p>
 
           {/* Value Bullets */}
-          <ul className="mt-6 flex flex-col gap-3">
-            <li className="flex items-start gap-2.5">
-              <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#d4a017]" />
-              <span className="text-base font-semibold text-[#ffffff] md:text-lg">
-                Full Outdoor Remodeling &mdash; Premium Pavers, Top-Tier Turf - &amp; Other Add-Ons Available
+          <ul className="mt-5 flex flex-col gap-2.5">
+            <li className="flex items-center gap-2.5">
+              <CheckCircle className="h-4 w-4 shrink-0 text-[#d4a017]" />
+              <span className="text-[14px] text-[#ffffff]/90">
+                Premium Pavers &amp; Top-Tier Turf
               </span>
             </li>
-            <li className="flex items-start gap-2.5">
-              <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#d4a017]" />
-              <span className="text-base font-semibold text-[#ffffff] md:text-lg">
+            <li className="flex items-center gap-2.5">
+              <CheckCircle className="h-4 w-4 shrink-0 text-[#d4a017]" />
+              <span className="text-[14px] text-[#ffffff]/90">
                 Free 3D Design Included
               </span>
             </li>
-            <li className="flex items-start gap-2.5">
-              <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#d4a017]" />
-              <span className="text-base font-semibold text-[#ffffff] md:text-lg">
+            <li className="flex items-center gap-2.5">
+              <CheckCircle className="h-4 w-4 shrink-0 text-[#d4a017]" />
+              <span className="text-[14px] text-[#ffffff]/90">
                 12 Months 0% Financing Available
               </span>
             </li>
           </ul>
 
-
-
           <a
             href="#quote"
-            className="mt-6 inline-block rounded-md border-2 border-[#ffffff] bg-[#2d5016] px-5 py-2.5 text-[0.87rem] font-extrabold uppercase tracking-wider text-[#ffffff] transition-colors hover:bg-[#234012]"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#ffffff] px-6 py-3 text-[13px] font-bold uppercase tracking-wider text-[#1a2e0d] transition-all hover:bg-[#f0f0ec] hover:shadow-lg"
           >
             Check If My Space Qualifies
           </a>

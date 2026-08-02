@@ -76,16 +76,17 @@ export function GallerySection() {
   }
 
   return (
-    <section id="gallery" className="bg-secondary py-16 lg:py-24">
+    <section id="gallery" className="bg-[#f7f5f0] py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
-          <p className="text-[16.5px] font-semibold uppercase tracking-widest text-[#2d5016] md:text-xs">
-            See Our Stunning Results
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#2d5016]">
+            Our Work
           </p>
-          <h2 className="mt-3 font-serif font-bold text-[35px] text-foreground md:text-3xl lg:text-4xl text-balance">
-            Explore Our Recent Transformations
+          <h2 className="mt-3 font-[family-name:var(--font-poppins)] text-[28px] leading-tight text-foreground lg:text-[36px] text-balance">
+            <span className="font-light">Recent</span>{" "}
+            <span className="font-extrabold">transformations.</span>
           </h2>
-          <p className="mt-3 text-[16px] text-muted-foreground md:text-sm">
+          <p className="mt-2 text-[14px] text-muted-foreground">
             Imagine the possibilities for your own yard
           </p>
         </div>
