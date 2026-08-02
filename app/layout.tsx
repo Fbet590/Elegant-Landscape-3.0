@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
-import { DM_Serif_Display, Inter, Poppins } from 'next/font/google'
+import { DM_Serif_Display, Fraunces, Inter, Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import Script from 'next/script'
 import './globals.css'
 
 const dmSerif = DM_Serif_Display({ weight: '400', subsets: ['latin'], variable: '--font-serif' })
+const fraunces = Fraunces({ weight: ['400', '600', '700'], subsets: ['latin'], variable: '--font-fraunces' })
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 const poppins = Poppins({ weight: ['400', '600', '700'], subsets: ['latin'], variable: '--font-poppins' })
 
@@ -63,7 +64,7 @@ export default function RootLayout({
           />
         </noscript>
       </head>
-      <body className={`${dmSerif.variable} ${inter.variable} ${poppins.variable} font-sans antialiased`}>
+      <body className={`${dmSerif.variable} ${fraunces.variable} ${inter.variable} ${poppins.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
