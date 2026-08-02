@@ -196,10 +196,10 @@ export function HeroSection() {
             className="object-cover object-[center_30%]"
             priority
           />
-<div className="absolute inset-0 bg-[#000000]/60" />
+        <div className="absolute inset-0 bg-[#000000]/50" />
         </div>
         <div className="relative mx-auto flex max-w-7xl items-center justify-center px-6 py-24">
-          <div className="w-full max-w-md rounded-xl bg-background p-8 text-center shadow-2xl">
+          <div className="w-full max-w-md rounded-2xl bg-background p-8 text-center shadow-2xl">
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#2d5016]">
               <Check className="h-8 w-8 text-[#ffffff]" />
             </div>
@@ -223,47 +223,26 @@ export function HeroSection() {
           className="object-cover object-[center_30%]"
           priority
         />
-        <div className="absolute inset-0 bg-[#000000]/60" />
+        <div className="absolute inset-0 bg-[#000000]/50" />
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-6 py-14 lg:flex-row lg:items-center lg:justify-between lg:py-20">
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-18 px-6 py-24 lg:flex-row lg:items-center lg:justify-between lg:py-20">
         {/* Left Text */}
         <div className="max-w-xl">
-          <h1 className="font-[family-name:var(--font-poppins)] font-bold text-[3.5rem] leading-tight text-[#ffffff] md:text-[4.1rem] lg:text-[5rem] lg:leading-snug text-balance">
-            $15.5K. New Turf. New Pavers. <br />
-            Done.
+          <h1 className="font-[family-name:var(--font-poppins)] text-[3rem] leading-[1.05] text-[#ffffff] md:text-[4rem] lg:text-[4.5rem] text-balance">
+            <span className="font-light">Transform your</span>
+            <br />
+            <span className="font-extrabold">outdoor space.</span>
           </h1>
 
-          {/* Value Bullets */}
-          <ul className="mt-6 flex flex-col gap-3">
-            <li className="flex items-start gap-2.5">
-              <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#d4a017]" />
-              <span className="text-base font-semibold text-[#ffffff] md:text-lg">
-                Full Outdoor Remodeling &mdash; Premium Pavers, Top-Tier Turf - &amp; Other Add-Ons Available
-              </span>
-            </li>
-            <li className="flex items-start gap-2.5">
-              <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#d4a017]" />
-              <span className="text-base font-semibold text-[#ffffff] md:text-lg">
-                Free 3D Design Included
-              </span>
-            </li>
-            <li className="flex items-start gap-2.5">
-              <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#d4a017]" />
-              <span className="text-base font-semibold text-[#ffffff] md:text-lg">
-                12 Months 0% Financing Available
-              </span>
-            </li>
-          </ul>
-
-
-
-          <a
-            href="#quote"
-            className="mt-6 inline-block rounded-md border-2 border-[#ffffff] bg-[#2d5016] px-5 py-2.5 text-[0.87rem] font-extrabold uppercase tracking-wider text-[#ffffff] transition-colors hover:bg-[#234012]"
-          >
-            Check If My Space Qualifies
-          </a>
+          <div className="mt-6 text-center flex items-center justify-center">
+            <a
+              href="#quote"
+              className="inline-flex items-center gap-2 rounded-full bg-[#ffffff] px-6 py-3 text-[13px] font-bold uppercase tracking-wider text-[#1a2e0d] transition-all hover:bg-[#f0f0ec] hover:shadow-lg"
+            >
+              Choose from our packages
+            </a>
+          </div>
         </div>
 
         {/* Right: Multi-step Form */}
@@ -276,9 +255,6 @@ export function HeroSection() {
                 <span className="text-[#ffffff]">Yours Might.</span>
               </p>
               <div className="my-3 h-px bg-[#ffffff]/20" />
-              <h2 className="text-lg md:text-xl font-bold text-[#ffffff] text-center leading-snug">
-                See If You Qualify for Our $15.5K Outdoor Transformation
-              </h2>
             </div>
 
             <div className="px-5 pt-4 pb-5">

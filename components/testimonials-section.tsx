@@ -79,19 +79,20 @@ export function TestimonialsSection() {
   }, [isAutoPlaying, goNext])
 
   return (
-    <section id="testimonials" className="bg-secondary py-16 lg:py-24">
+    <section id="testimonials" className="bg-background py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
-          <p className="text-[16.5px] font-semibold uppercase tracking-widest text-[#2d5016] md:text-xs">
-            Don&apos;t Just Take Our Word For It...
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#2d5016]">
+            Client Reviews
           </p>
-          <h2 className="mt-3 font-serif font-bold text-[35px] text-foreground md:text-3xl lg:text-4xl text-balance">
-            Here&apos;s What Our Past Clients Had To Say
+          <h2 className="mt-3 font-[family-name:var(--font-poppins)] font-extrabold text-[28px] leading-tight text-foreground lg:text-[36px] text-balance">
+            <span className="font-light">What our</span>{" "}
+            <span className="font-extrabold">clients say.</span>
           </h2>
         </div>
 
         <div
-          className="relative mt-12"
+          className="relative mt-10"
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
@@ -106,29 +107,29 @@ export function TestimonialsSection() {
                   key={i}
                   className="w-full flex-shrink-0 px-2"
                 >
-                  <div className="mx-auto max-w-2xl rounded-xl bg-background p-8 shadow-sm border border-border">
+                  <div className="mx-auto max-w-2xl rounded-2xl bg-[#f7f5f0] p-7">
                     {/* Stars */}
                     <div className="flex gap-0.5">
                       {[...Array(5)].map((_, si) => (
-                        <Star key={si} className="h-4 w-4 fill-[#f59e0b] text-[#f59e0b]" />
+                        <Star key={si} className="h-3.5 w-3.5 fill-[#f59e0b] text-[#f59e0b]" />
                       ))}
                     </div>
 
-                    {/* Name + Google */}
-                    <div className="mt-4 flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#2d5016] text-sm font-bold text-[#ffffff]">
-                          {t.name.charAt(0)}
-                        </div>
-                        <span className="font-semibold text-foreground">{t.name}</span>
-                      </div>
-                      <GoogleIcon className="h-6 w-6" />
-                    </div>
-
                     {/* Review */}
-                    <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground md:text-sm">
+                    <p className="mt-3 text-[15px] leading-relaxed text-foreground/70">
                       {t.text}
                     </p>
+
+                    {/* Name + Google */}
+                    <div className="mt-5 flex items-center justify-between">
+                      <div className="flex items-center gap-2.5">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#2d5016] text-xs font-bold text-[#ffffff]">
+                          {t.name.charAt(0)}
+                        </div>
+                        <span className="text-[14px] font-semibold text-foreground">{t.name}</span>
+                      </div>
+                      <GoogleIcon className="h-5 w-5" />
+                    </div>
                   </div>
                 </div>
               ))}
@@ -138,27 +139,27 @@ export function TestimonialsSection() {
           {/* Nav Arrows */}
           <button
             onClick={goPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 flex h-10 w-10 items-center justify-center rounded-full bg-background shadow-md border border-border text-foreground transition-colors hover:bg-secondary"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 flex h-9 w-9 items-center justify-center rounded-full bg-background shadow-sm border border-border/60 text-foreground transition-colors hover:border-[#2d5016]/30"
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-4 w-4" />
           </button>
           <button
             onClick={goNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 flex h-10 w-10 items-center justify-center rounded-full bg-background shadow-md border border-border text-foreground transition-colors hover:bg-secondary"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 flex h-9 w-9 items-center justify-center rounded-full bg-background shadow-sm border border-border/60 text-foreground transition-colors hover:border-[#2d5016]/30"
             aria-label="Next testimonial"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-4 w-4" />
           </button>
 
           {/* Dots */}
-          <div className="mt-8 flex items-center justify-center gap-2">
+          <div className="mt-7 flex items-center justify-center gap-1.5">
             {testimonials.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrent(i)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  i === current ? "w-6 bg-[#2d5016]" : "w-2 bg-border"
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === current ? "w-5 bg-[#2d5016]" : "w-1.5 bg-[#2d5016]/20"
                 }`}
                 aria-label={`Go to testimonial ${i + 1}`}
               />
