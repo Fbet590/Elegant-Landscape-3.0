@@ -2,12 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import dynamic from "next/dynamic"
 import { ChevronLeft, ChevronRight, Check, CheckCircle, Shield, Sparkles, CreditCard, Clock, User, Mail, Phone as PhoneIcon } from "lucide-react"
-
-const MetallicWord = dynamic(() => import("./metallic-word").then((m) => m.MetallicWord), {
-  ssr: false,
-})
 
 type StepConfig = {
   question: string
@@ -240,9 +235,9 @@ export function HeroSection() {
             <span className="font-extrabold">outdoor space.</span>
           </h1>
 
-          <div className="mt-2 h-[80px] w-full max-w-[340px] md:h-[100px] lg:h-[116px]" aria-label="Elegantly.">
-            <MetallicWord />
-          </div>
+          <p className="metallic-green-text mt-3 font-[family-name:var(--font-fraunces)] text-[3.75rem] italic leading-tight">
+            Elegantly.
+          </p>
 
           <div className="mt-6 text-center flex items-center justify-center">
             <a
