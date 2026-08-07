@@ -232,7 +232,7 @@ export function HeroSection() {
           <h1 className="font-[family-name:var(--font-poppins)] text-[3rem] leading-[1.05] text-[#ffffff] md:text-[4rem] lg:text-[4.5rem] text-balance">
             <span className="font-light">Transform your</span>
             <br />
-            <span className="font-extrabold">outdoor space.</span>
+            <span className="font-extrabold leading-none">outdoor space.</span>
           </h1>
 
           <div className="mt-1 -ml-2">
@@ -247,7 +247,7 @@ export function HeroSection() {
           <div className="mt-6 text-center flex items-center justify-center">
             <a
               href="#quote"
-              className="inline-flex items-center gap-2 rounded-full bg-[#ffffff] px-6 py-3 text-[20px] font-bold uppercase tracking-wider text-[#1a2e0d] transition-all hover:bg-[#f0f0ec] hover:shadow-lg"
+              className="inline-flex items-center gap-2 rounded-full bg-[#ffffff] px-6 py-3 text-[18px] font-bold uppercase tracking-wider text-[#1a2e0d] transition-all hover:bg-[#f0f0ec] hover:shadow-lg"
             >
               Choose Our $35K FLAT package
             </a>
@@ -261,7 +261,7 @@ export function HeroSection() {
             <div className="bg-gradient-to-br from-[#2d5016] to-[#1f3a0f] px-5 py-5">
               <p className="text-sm font-semibold uppercase tracking-wide text-center">
                 <span className="text-lg text-[#d4a017]">Not Every Home Qualifies.</span>{" "}
-                <span className="text-lg text-[#ffffff]">Yours Might! Let&apos;s Find out!</span>
+                <span className="text-lg text-[#ffffff]">But Yours Might. Let&apos;s Find out!</span>
               </p>
               <div className="my-3 h-px bg-[#ffffff]/20" />
             </div>
