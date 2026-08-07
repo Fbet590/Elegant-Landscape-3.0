@@ -116,7 +116,7 @@ export function TestimonialsSection() {
                     </div>
 
                     {/* Review */}
-                    <p className={`mt-3 leading-relaxed text-foreground/70 ${i === 3 ? "text-[18px]" : "text-[15px]"}`}>
+                    <p className="mt-3 text-[18px] leading-relaxed text-foreground/70">
                       {t.text}
                     </p>
 
@@ -126,7 +126,7 @@ export function TestimonialsSection() {
                         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#2d5016] text-xs font-bold text-[#ffffff]">
                           {t.name.charAt(0)}
                         </div>
-                        <span className={`font-semibold text-foreground ${t.name === "Karen Hanna" ? "text-[20px]" : "text-[14px]"}`}>{t.name}</span>
+                        <span className="text-[20px] font-semibold text-foreground">{t.name}</span>
                       </div>
                       <GoogleIcon className="h-5 w-5" />
                     </div>
