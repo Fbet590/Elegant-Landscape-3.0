@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, Phone, Flame } from "lucide-react"
+import { Menu, X, Phone } from "lucide-react"
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -17,13 +17,6 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Promo strip */}
-      <div className="bg-[#2d5016] py-2 px-4">
-        <p className="flex items-center justify-center gap-2 text-sm font-semibold text-[#ffffff] tracking-wide">
-          <Flame className="h-4 w-4 text-[#f59e0b]" />
-          <span>FREE Fire Pit &amp; Installation For Projects Over $25K</span>
-        </p>
-      </div>
       <nav className="bg-background/95 backdrop-blur-sm border-b border-border/50 mx-auto flex max-w-7xl items-center justify-between px-5 py-2.5">
         <Link href="/" className="flex items-center">
           <img
