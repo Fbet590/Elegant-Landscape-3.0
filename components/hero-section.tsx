@@ -235,16 +235,21 @@ export function HeroSection() {
             <span className="font-extrabold">outdoor space.</span>
           </h1>
 
-          <p className="mt-3 font-[family-name:var(--font-fraunces)] text-[3.75rem] italic leading-tight text-[#746329]">
-            Elegantly.
-          </p>
+          <div className="mt-1 -ml-2">
+            <img
+              src="/images/elegantly.png"
+              alt="Elegantly."
+              className="w-[320px] max-w-full"
+              style={{ mixBlendMode: "screen" }}
+            />
+          </div>
 
           <div className="mt-6 text-center flex items-center justify-center">
             <a
               href="#quote"
-              className="inline-flex items-center gap-2 rounded-full bg-[#ffffff] px-6 py-3 text-[13px] font-bold uppercase tracking-wider text-[#1a2e0d] transition-all hover:bg-[#f0f0ec] hover:shadow-lg"
+              className="inline-flex items-center gap-2 rounded-full bg-[#ffffff] px-6 py-3 text-[20px] font-bold uppercase tracking-wider text-[#1a2e0d] transition-all hover:bg-[#f0f0ec] hover:shadow-lg"
             >
-              Choose from our packages
+              Choose Our $35K FLAT package
             </a>
           </div>
         </div>
@@ -255,8 +260,8 @@ export function HeroSection() {
             {/* Form headline */}
             <div className="bg-gradient-to-br from-[#2d5016] to-[#1f3a0f] px-5 py-5">
               <p className="text-sm font-semibold uppercase tracking-wide text-center">
-                <span className="text-[#d4a017]">Not Every Home Qualifies.</span>{" "}
-                <span className="text-[#ffffff]">Yours Might.</span>
+                <span className="text-lg text-[#d4a017]">Not Every Home Qualifies.</span>{" "}
+                <span className="text-lg text-[#ffffff]">Yours Might! Let&apos;s Find out!</span>
               </p>
               <div className="my-3 h-px bg-[#ffffff]/20" />
             </div>
@@ -411,19 +416,19 @@ export function HeroSection() {
       {/* Bottom Trust Badges */}
       <div className="relative border-t border-[#ffffff]/10 bg-[#000000]/30">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-3 px-6 py-3.5">
-          <div className="flex items-center gap-2 text-sm text-[#d4d0c8] md:text-base">
+          <div className="flex items-center gap-2 text-base text-[#d4d0c8] md:text-base">
             <Shield className="h-5 w-5 text-[#d4a017]" />
             <span>Licensed C-27 #983517</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-[#d4d0c8] md:text-base">
+          <div className="flex items-center gap-2 text-base text-[#d4d0c8] md:text-base">
             <Sparkles className="h-5 w-5 text-[#d4a017]" />
             <span>FREE 3D Design</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-[#d4d0c8] md:text-base">
+          <div className="flex items-center gap-2 text-base text-[#d4d0c8] md:text-base">
             <CreditCard className="h-5 w-5 text-[#d4a017]" />
             <span>0% Down Financing</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-[#d4d0c8] md:text-base">
+          <div className="flex items-center gap-2 text-base text-[#d4d0c8] md:text-base">
             <Clock className="h-5 w-5 text-[#d4a017]" />
             <span>Since 2013</span>
           </div>

@@ -82,12 +82,12 @@ export function TestimonialsSection() {
     <section id="testimonials" className="bg-background py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#2d5016]">
+          <p className="text-[14px] font-semibold uppercase tracking-[0.18em] text-[#2d5016]">
             Client Reviews
           </p>
-          <h2 className="mt-3 font-[family-name:var(--font-poppins)] font-extrabold text-[28px] leading-tight text-foreground lg:text-[36px] text-balance">
-            <span className="font-light">What our</span>{" "}
-            <span className="font-extrabold">clients say.</span>
+          <h2 className="mt-3 font-[family-name:var(--font-poppins)] font-extrabold leading-tight text-foreground lg:text-[36px] text-balance">
+            <span className="font-light text-[30px]">What our</span>{" "}
+            <span className="font-extrabold text-[30px]">clients say.</span>
           </h2>
         </div>
 
@@ -116,7 +116,7 @@ export function TestimonialsSection() {
                     </div>
 
                     {/* Review */}
-                    <p className="mt-3 text-[15px] leading-relaxed text-foreground/70">
+                    <p className={`mt-3 leading-relaxed text-foreground/70 ${i === 3 ? "text-[18px]" : "text-[15px]"}`}>
                       {t.text}
                     </p>
 
@@ -126,7 +126,7 @@ export function TestimonialsSection() {
                         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#2d5016] text-xs font-bold text-[#ffffff]">
                           {t.name.charAt(0)}
                         </div>
-                        <span className="text-[14px] font-semibold text-foreground">{t.name}</span>
+                        <span className={`font-semibold text-foreground ${t.name === "Karen Hanna" ? "text-[20px]" : "text-[14px]"}`}>{t.name}</span>
                       </div>
                       <GoogleIcon className="h-5 w-5" />
                     </div>
