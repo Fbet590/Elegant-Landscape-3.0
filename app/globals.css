@@ -130,19 +130,5 @@
   }
 }
 
-.metallic-green-text {
-  background: linear-gradient(
-    112deg,
-    #2d5016 0%,
-    #b9d98b 22%,
-    #4f8128 38%,
-    #e3f1c9 50%,
-    #5f9631 64%,
-    #2d5016 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  text-shadow: 0 1px 0 rgb(255 255 255 / 0.18), 0 8px 18px rgb(45 80 22 / 0.3);
-}
+
 
