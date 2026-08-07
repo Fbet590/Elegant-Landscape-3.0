@@ -91,6 +91,32 @@ export function HeroSection() {
     return emailRegex.test(email)
   }
 
+  function formatPhone(raw: string): string {
+    const digits = raw.replace(/\D/g, "").slice(0, 10)
+    if (digits.length <= 3) return digits
+    if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`
+  }
+
+  function isValidPhone(phone: string): boolean {
+    const digits = phone.replace(/\D/g, "")
+    if (digits.length !== 10) return false
+    // Reject invalid area codes: must not start with 0 or 1
+    if (digits[0] === "0" || digits[0] === "1") return false
+    // Reject all-same digit patterns (e.g. 1111111111, 0000000000)
+    if (/^(\d)\1{9}$/.test(digits)) return false
+    // Reject sequential patterns (e.g. 1234567890, 0123456789)
+    const sequential = ["0123456789", "1234567890", "9876543210"]
+    if (sequential.includes(digits)) return false
+    // Reject obviously fake numbers (555-0100 to 555-0199 are fictional per NANP)
+    if (digits.startsWith("555010") || digits.startsWith("555011") ||
+        digits.startsWith("555012") || digits.startsWith("555013") ||
+        digits.startsWith("555014") || digits.startsWith("555015") ||
+        digits.startsWith("555016") || digits.startsWith("555017") ||
+        digits.startsWith("555018") || digits.startsWith("555019")) return false
+    return true
+  }
+
   function canProceed() {
     if (currentStep.type === "radio") {
       return answers[step] !== undefined
@@ -103,6 +129,9 @@ export function HeroSection() {
       const value = textInputs[currentStep.field].trim()
       if (currentStep.field === "email") {
         return isValidEmail(value)
+      }
+      if (currentStep.field === "phone") {
+        return isValidPhone(value)
       }
       return value.length > 0
     }
@@ -180,8 +209,9 @@ export function HeroSection() {
 
   function handleTextChange(value: string) {
     if (currentStep.type === "text" && currentStep.field) {
-      setTextInputs({ ...textInputs, [currentStep.field]: value })
-      setAnswers({ ...answers, [step]: value })
+      const formatted = currentStep.field === "phone" ? formatPhone(value) : value
+      setTextInputs({ ...textInputs, [currentStep.field]: formatted })
+      setAnswers({ ...answers, [step]: formatted })
     }
   }
 
@@ -362,17 +392,28 @@ export function HeroSection() {
                       )}
                       <input
                         type={currentStep.field === "email" ? "email" : currentStep.field === "phone" ? "tel" : "text"}
+                        inputMode={currentStep.field === "phone" ? "numeric" : undefined}
                         value={textInputs[currentStep.field]}
                         onChange={(e) => handleTextChange(e.target.value)}
                         placeholder={currentStep.placeholder}
                         autoFocus
-                        className={`w-full rounded-xl border border-border bg-[#fafaf9] py-3.5 text-[16px] text-foreground outline-none transition-all duration-200 placeholder:text-muted-foreground/40 focus:border-[#2d5016] focus:bg-background focus:ring-2 focus:ring-[#2d5016]/15 ${
-                          currentStep.icon ? "pl-10 pr-4" : "px-4"
-                        }`}
+                        maxLength={currentStep.field === "phone" ? 14 : undefined}
+                        className={`w-full rounded-xl border bg-[#fafaf9] py-3.5 text-[16px] text-foreground outline-none transition-all duration-200 placeholder:text-muted-foreground/40 focus:bg-background focus:ring-2 ${
+                          currentStep.field === "phone" && textInputs.phone.replace(/\D/g, "").length >= 10 && !isValidPhone(textInputs.phone)
+                            ? "border-red-500 focus:border-red-500 focus:ring-red-500/15"
+                            : "border-border focus:border-[#2d5016] focus:ring-[#2d5016]/15"
+                        } ${currentStep.icon ? "pl-10 pr-4" : "px-4"}`}
                         onKeyDown={(e) => {
                           if (e.key === "Enter" && canProceed()) handleNext()
                         }}
                       />
+                      {currentStep.field === "phone" &&
+                        textInputs.phone.replace(/\D/g, "").length >= 10 &&
+                        !isValidPhone(textInputs.phone) && (
+                          <p className="mt-1.5 text-[13px] text-red-500">
+                            Please enter a valid US phone number.
+                          </p>
+                        )}
                     </div>
                   )}
                 </div>
